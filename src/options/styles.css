@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply min-h-screen;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.options-container {
+  @apply max-w-xl mx-auto py-10 px-6;
+}
+
+.options-header {
+  @apply flex flex-col items-center mb-10;
+}
+
+.logo {
+  @apply text-5xl text-blue-500 mb-3;
+}
+
+.options-header h1 {
+  @apply text-2xl font-bold mb-1;
+}
+
+.subtitle {
+  @apply text-sm;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.options-main {
+  @apply flex flex-col gap-8;
+}
+
+.section {
+  @apply rounded-xl p-6;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section h2 {
+  @apply text-base font-semibold mb-5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group {
+  @apply mb-5;
+}
+
+.form-group:last-child {
+  @apply mb-0;
+}
+
+.form-group label {
+  @apply block text-sm font-medium mb-2;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group input,
+.form-group select {
+  @apply w-full px-3.5 py-2.5 rounded-lg text-sm text-white;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.15s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  @apply outline-none border-blue-500;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group select option {
+  background: #1a1a1a;
+}
+
+.help-text {
+  @apply mt-2 text-xs;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.help-text a {
+  @apply text-blue-500 no-underline;
+}
+
+.help-text a:hover {
+  @apply underline;
+}
+
+/* Shortcut recorder */
+.shortcut-recorder {
+  @apply flex items-center gap-4;
+}
+
+.shortcut-display {
+  @apply flex-1 flex items-center justify-center gap-2 py-4 px-4 rounded-lg;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.shortcut-display.recording {
+  @apply border-2 border-blue-500;
+  background: rgba(59, 130, 246, 0.1);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.key {
+  @apply px-4 py-2 rounded-md text-sm font-semibold;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plus {
+  @apply text-base;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.about-info {
+  @apply text-sm leading-loose;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-info strong {
+  @apply text-white;
+}
+
+.credits {
+  @apply mt-3 text-xs;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.options-footer {
+  @apply flex justify-end gap-3 mt-8 pt-6;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn {
+  @apply px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer border-none;
+  transition: all 0.15s ease;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-600;
+}
+
+.btn-secondary {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary.recording {
+  @apply bg-red-500/20 border-red-500 text-red-400;
+}
+
+.toast {
+  @apply fixed bottom-6 left-1/2 px-5 py-3 text-sm rounded-lg pointer-events-none;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.toast.show {
+  @apply opacity-100;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast.success {
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.toast.error {
+  border-color: rgba(239, 68, 68, 0.5);
+}

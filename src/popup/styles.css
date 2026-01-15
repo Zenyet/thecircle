@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply w-[280px];
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.popup-container {
+  @apply p-4;
+}
+
+.popup-header {
+  @apply flex items-center gap-2.5 mb-4 pb-3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  @apply text-3xl text-blue-500;
+}
+
+.popup-header h1 {
+  @apply text-lg font-semibold;
+}
+
+.popup-content {
+  @apply flex flex-col gap-4;
+}
+
+.shortcut-hint {
+  @apply flex items-center justify-center gap-1.5 p-3 rounded-lg;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.key {
+  @apply px-2.5 py-1 rounded text-sm font-medium;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plus {
+  @apply text-sm;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hint-text {
+  @apply ml-2 text-sm;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.quick-actions {
+  @apply flex gap-2;
+}
+
+.action-btn {
+  @apply flex-1 flex items-center justify-center gap-1.5 p-2.5 rounded-lg text-sm text-white cursor-pointer;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.15s ease;
+}
+
+.action-btn:hover {
+  background: rgba(59, 130, 246, 0.3);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.action-icon {
+  @apply text-base;
+}
+
+.stats {
+  @apply flex gap-3;
+}
+
+.stat-item {
+  @apply flex-1 flex flex-col items-center p-3 rounded-lg;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.stat-value {
+  @apply text-2xl font-semibold text-blue-500;
+}
+
+.stat-label {
+  @apply text-xs mt-1;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.popup-footer {
+  @apply flex justify-between items-center mt-4 pt-3;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.version {
+  @apply text-xs;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.github-link {
+  @apply text-xs no-underline;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.15s ease;
+}
+
+.github-link:hover {
+  @apply text-blue-500;
+}
