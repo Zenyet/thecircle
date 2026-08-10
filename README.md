@@ -1,3 +1,5 @@
+
+
 # Eniwer
 
 Eniwer（灵感来自 JetBrains 的双击 Shift）是一款优雅的 AI 浏览器工具面板。
@@ -66,7 +68,7 @@ src/
 - 网页标注与批注
 - AI 摘要与对话
 - Google Drive 云同步与备份
-- 快捷键呼出面板（`双击 shift`）
+- 快捷键呼出面板（`Alt + Space`）
 
 ## License
 
